@@ -51,7 +51,7 @@ runs:
       run: |
         zip -r -j ${{ inputs.archive-name }} ${{ inputs.binary-path }} CHANGELOG.md LICENSE
     - name: Release binaries
-      uses: softprops/action-gh-release@v2
+      uses: softprops/action-gh-release@v3
       with:
         fail_on_unmatched_files: true
         files: ${{ inputs.archive-name }}
